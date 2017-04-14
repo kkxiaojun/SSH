@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>SpringMVC_Spring_Hibernate</display-name>
+  
+  
+  <!-- 防止中文参数乱码 放在前面 -->  
+      <filter>  
+          <filter-name>SetCharacterEncoding</filter-name>  
+          <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+          <init-param>  
+               <param-name>encoding</param-name>  
+               <param-value>UTF-8</param-value>  
+          </init-param>  
+          <init-param>  
+               <param-name>forceEncoding</param-name>  
+               <param-value>true</param-value>  
+               <!-- 强制进行转码 -->  
+          </init-param>  
+     </filter>  
+     <filter-mapping>  
+          <filter-name>SetCharacterEncoding</filter-name>  
+          <url-pattern>/*</url-pattern>  
+     </filter-mapping>  
+     
+  	<!-- spring 配置Listener-->
+  
+  	<!-- needed for ContextLoaderListener -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/resources/beans.xml</param-value>
+	</context-param>
+
+	<!-- Bootstraps the root web application context before servlet initialization -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- springmvc配置dispatcherServlet -->
+	
+ 	<!-- 入口是前端控制器 -->
+	<servlet>
+		<servlet-name>springDispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:/resources/springmvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map all requests to the DispatcherServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>springDispatcherServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+</web-app>
