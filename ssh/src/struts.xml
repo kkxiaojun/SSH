@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+    "http://struts.apache.org/dtds/struts-2.3.dtd"> 
+<struts>
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="employee_*" class="employeeAction" method="{1}" >
+			<result name="INPUT">/index.jsp</result>
+			<result name="SUCCESS" type="redirect" >/frame.jsp</result>
+			<result name="findAll">/jsp/employee/listEmployee.jsp</result>
+			<result name="goAddEmployee">/jsp/employee/addEmployee.jsp</result>
+			<result name="addSuccess" type="redirect">employee_findAll.action</result>
+			<result name="goEditEmployee">/jsp/employee/editEmployee.jsp</result>
+			<result name="editSuccess" type="redirect">employee_findAll.action</result>
+			<result name="deleteSuccess" type="redirect">employee_findAll.action</result>
+		</action>
+		<action name="department_*" class="departmentAction" method="{1}">
+			<result name="findAll">/jsp/department/listDepartment.jsp</result>
+			<result name="goAddDepartment">/jsp/department/addDepartment.jsp</result>
+			<result name="addSuccess" type="redirect">department_findAll.action</result>
+			<result name="goEditDepartment">/jsp/department/editDepartment.jsp</result>
+			<result name="updateSuccess" type="redirect">department_findAll.action</result>
+			<result name="deleteSuccess" type="redirect">department_findAll.action</result>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>EMSystem</display-name>
+  
+  <!-- 配置Spring核心监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  
+  <!-- 配置-->
+  <filter>
+  	  <filter-name>OpenSessionInViewFilter</filter-name>
+  	  <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+  	  <!-- 配置openSessionInView时，启动后他默认是给没有配置事务边界的方法都默认为只读的，所以在插入数据时会报错 -->
+  	  <init-param>   
+           <param-name>flushMode</param-name>   
+           <param-value>AUTO</param-value>   
+      </init-param>  
+  </filter>
+  <filter-mapping>
+  <filter-name>OpenSessionInViewFilter</filter-name>
+  <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+  <!-- 配置Struts核心过滤器 -->
+  <filter>
+    <filter-name>struts</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
