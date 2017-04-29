@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+
+	<!-- 引入外部的属性文件-->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+	<!-- 配置连接池 此处为c3p0-->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+		<property name="jdbcUrl" value="${jdbc.url}"></property>
+		<property name="user" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+
+	<!-- 配置hibernate相关属性 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 注入链接池 -->
+		<property name="dataSource" ref="dataSource"/>
+		<!-- 配置hibernate属性-->
+		<property name="hibernateProperties">
+			<props> 
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop><!-- 有表自动更新表结构，没有就创建表 -->
+			</props>
+		</property>
+		<!-- 加载hibernate配置文件-->
+		<property name="mappingResources">
+			<list>
+				<value>com/ssh/domain/Product.hbm.xml</value>
+			</list>
+		</property>
+		
+	</bean>
+
+
+	<!-- 配置action类 -->
+	<bean id="productAction" class="com.ssh.action.ProductAction">
+		<property name="productService" ref="productService"/>
+	</bean>
+
+	<!-- 配置业务层的类 -->
+	<bean id="productService" class="com.ssh.service.ProductService">
+		<property name="productDao" ref="productDao"/>
+	</bean>
+
+	<!-- 配置DAO的类 -->
+	<bean id="productDao" class="com.ssh.dao.ProductDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 开启注解事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+</beans>
