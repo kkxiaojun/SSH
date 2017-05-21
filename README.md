@@ -1,4 +1,7 @@
-﻿## ssh
+## Employee
+* jsp+servlet+javaBean构成的MVC
+* 员工、部门的增删改查、分页等
+## ssh
 1. 开发环境
  * window7
  * eclipse： Mars.2 Release (4.5.2)（插件：springsource-tool,hibernatetools-Update)
