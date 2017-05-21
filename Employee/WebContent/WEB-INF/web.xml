@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>Code</servlet-name>
+  	<servlet-class>com.util.Code</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>com.servlet.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeUpdateSelf</servlet-name>
+    <servlet-class>com.servlet.EmploeUpdateSelf</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeShowSelf</servlet-name>
+    <servlet-class>com.servlet.EmploeShowSelf</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploePasswordUpdate</servlet-name>
+    <servlet-class>com.servlet.EmploePasswordUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeUpdatePhoto</servlet-name>
+    <servlet-class>com.servlet.EmploeUpdatePhoto</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeNewTable</servlet-name>
+    <servlet-class>com.servlet.EmploeNewTable</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeNewsAdd</servlet-name>
+    <servlet-class>com.servlet.EmploeNewsAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeNewsDetail</servlet-name>
+    <servlet-class>com.servlet.EmploeNewsDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerLogin</servlet-name>
+    <servlet-class>com.servlet.ManagerLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeTable</servlet-name>
+    <servlet-class>com.servlet.EmploeTable</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeRemove</servlet-name>
+    <servlet-class>com.servlet.EmploeRemove</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeDetail</servlet-name>
+    <servlet-class>com.servlet.EmploeDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitPassword</servlet-name>
+    <servlet-class>com.servlet.InitPassword</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerEmploeUpdate</servlet-name>
+    <servlet-class>com.servlet.ManagerEmploeUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerShowSelf</servlet-name>
+    <servlet-class>com.servlet.ManagerShowSelf</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchEmploe</servlet-name>
+    <servlet-class>com.servlet.SearchEmploe</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NewsTable</servlet-name>
+    <servlet-class>com.servlet.NewsTable</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerNewsAdd</servlet-name>
+    <servlet-class>com.servlet.ManagerNewsAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerNewsDetail</servlet-name>
+    <servlet-class>com.servlet.ManagerNewsDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerDeleteNews</servlet-name>
+    <servlet-class>com.servlet.ManagerDeleteNews</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerDeptTable</servlet-name>
+    <servlet-class>com.servlet.ManagerDeptTable</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerDeptAdd</servlet-name>
+    <servlet-class>com.servlet.ManagerDeptAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerDeptTable_add</servlet-name>
+    <servlet-class>com.servlet.ManagerDeptTable_add</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerDeptUpdate</servlet-name>
+    <servlet-class>com.servlet.ManagerDeptUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerDeptUpdate_table</servlet-name>
+    <servlet-class>com.servlet.ManagerDeptUpdate_table</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerEmploeAdd</servlet-name>
+    <servlet-class>com.servlet.ManagerEmploeAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerEmploeTable_add</servlet-name>
+    <servlet-class>com.servlet.ManagerEmploeTable_add</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerMpasswordUpdate</servlet-name>
+    <servlet-class>com.servlet.ManagerMpasswordUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindPassword</servlet-name>
+    <servlet-class>com.servlet.FindPassword</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmploeLog_off</servlet-name>
+    <servlet-class>com.servlet.EmploeLog_off</servlet-class>
+  </servlet>
+
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>com.filter.EncodingFilter</filter-class>
+  </filter>
+<!--   <filter>
+  	<filter-name>SafeEmploeFilter</filter-name>
+  	<filter-class>com.filter.SafeEmploeFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>SafeManagerFilter</filter-name>
+  	<filter-class>com.filter.SafeManagerFilter</filter-class>
+  </filter> -->
+  <servlet-mapping>
+  	<servlet-name>Code</servlet-name>
+  	<url-pattern>/Code</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeUpdateSelf</servlet-name>
+    <url-pattern>/EmploeUpdateSelf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeShowSelf</servlet-name>
+    <url-pattern>/EmploeShowSelf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploePasswordUpdate</servlet-name>
+    <url-pattern>/EmploePasswordUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeUpdatePhoto</servlet-name>
+    <url-pattern>/EmploeUpdatePhoto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeNewTable</servlet-name>
+    <url-pattern>/EmploeNewTable</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeNewsAdd</servlet-name>
+    <url-pattern>/EmploeNewsAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeNewsDetail</servlet-name>
+    <url-pattern>/EmploeNewsDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerLogin</servlet-name>
+    <url-pattern>/ManagerLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeTable</servlet-name>
+    <url-pattern>/EmploeTable</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeRemove</servlet-name>
+    <url-pattern>/EmploeRemove</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeDetail</servlet-name>
+    <url-pattern>/EmploeDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitPassword</servlet-name>
+    <url-pattern>/InitPassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerEmploeUpdate</servlet-name>
+    <url-pattern>/ManagerEmploeUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerShowSelf</servlet-name>
+    <url-pattern>/ManagerShowSelf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchEmploe</servlet-name>
+    <url-pattern>/SearchEmploe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsTable</servlet-name>
+    <url-pattern>/NewsTable</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerNewsAdd</servlet-name>
+    <url-pattern>/ManagerNewsAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerNewsDetail</servlet-name>
+    <url-pattern>/ManagerNewsDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerDeleteNews</servlet-name>
+    <url-pattern>/ManagerDeleteNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerDeptTable</servlet-name>
+    <url-pattern>/ManagerDeptTable</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerDeptAdd</servlet-name>
+    <url-pattern>/ManagerDeptAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerDeptTable_add</servlet-name>
+    <url-pattern>/ManagerDeptTable_add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerDeptUpdate</servlet-name>
+    <url-pattern>/ManagerDeptUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerDeptUpdate_table</servlet-name>
+    <url-pattern>/ManagerDeptUpdate_table</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerEmploeAdd</servlet-name>
+    <url-pattern>/ManagerEmploeAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerEmploeTable_add</servlet-name>
+    <url-pattern>/ManagerEmploeTable_add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerMpasswordUpdate</servlet-name>
+    <url-pattern>/ManagerMpasswordUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindPassword</servlet-name>
+    <url-pattern>/FindPassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmploeLog_off</servlet-name>
+    <url-pattern>/EmploeLog_off</url-pattern>
+  </servlet-mapping>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
